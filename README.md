@@ -15,7 +15,7 @@ This repository contains the Angular implementation of a IELTS Course app called
 - Course details 
 - Check List
 
-## Code Structre
+## Code Structure
 The code structure in this project is organized into different components, interfaces and services to create the IELTS Course app. Here's a brief description of each major part of the code structure:
 
 **Components:**
