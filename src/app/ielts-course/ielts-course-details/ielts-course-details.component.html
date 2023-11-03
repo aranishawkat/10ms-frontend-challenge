@@ -1,0 +1,18 @@
+<app-header (click)="changeLanguage()"></app-header>
+<div class="flex justify-center">
+  <div class="container flex flex-col gap-4 md:flex-row md:pt-10">
+    <app-breadcrumb></app-breadcrumb>
+    <section class="order-2 flex-1 md:order-1 md:max-w-[calc(100%-_348px)] lg:max-w-[calc(100%-_448px)] ml-0">
+      <app-title-description-section [data]="data"></app-title-description-section>
+      <app-course-instructors [data]="data"></app-course-instructors>
+      <app-course-layout [data]="data"></app-course-layout>
+      <app-course-learing-outcomes [data]="data"></app-course-learing-outcomes>
+      <app-course-exclusive-features [data]="data"></app-course-exclusive-features>
+      <app-course-details [data]="data"></app-course-details>
+    </section>
+
+    <section class="order-1 w-full md:max-w-[330px] lg:max-w-[400px] md:ml-4">
+      <app-trailer [data]="data"></app-trailer>
+    </section>
+  </div>
+</div>

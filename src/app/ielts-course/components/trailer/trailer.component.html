@@ -1,0 +1,50 @@
+<div class="md:sticky md:top-[112px]" *ngIf="data">
+  <div class="overflow-hidden rounded-md md:border">
+    <div class="youtube-video relatvie flex aspect-video items-center justify-center overflow-hidden bg-black">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/zrlYnaZftEQ?rel=0" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="" title="Embedded youtube"></iframe>
+    </div>
+    <div class="block md:hidden">
+      <h1 class="text-gray mb-3 mt-3 text-[21px] font-semibold md:text-4xl">
+        {{ data.title }}
+      </h1>
+      <div class="mb-4 text-sm font-normal"></div>
+    </div>
+    <div
+      class="bottom-0 left-0 z-50 w-full p-4 mx-md:fixed mx-md:bg-white mx-md:drop-shadow-[0_-3px_15px_rgba(0,0,0,0.20)]">
+      <div>
+        <div></div>
+      </div>
+      <div class="flex items-center justify-between md:flex-col md:items-start">
+        <div>
+          <div class="flex items-center justify-between md:flex-col md:items-start">
+            <div class="md:mb-3">
+              <div class="inline-block text-2xl font-semibold">৳1000</div>
+              <del class="ml-2 text-base font-normal md:text-xl">৳1000</del>
+            </div>
+          </div>
+          <div class="mb-2 flex items-center justify-between"></div>
+        </div>
+        <button class="rounded-md bg-green-500 p-3 whitespace-nowrap text-base font-medium text-white md:w-full
+                hover:bg-green-600 hover:text-gray-100 hover:shadow-md transition duration-300">
+          {{ data.cta_text.value }}
+        </button>
+      </div>
+    </div>
+    <div class="grid py-2 md:p-6">
+      <div *ngFor="let item of data.checklist" class="mb-3 flex items-center leading-5">
+        <div class="inline-block h-[20px] w-[20px] opacity-0 transition-opacity duration-300 ease-in-out"
+             style="font-size: 0px; opacity: 1;">
+          <img alt="icon" loading="lazy" width="20" height="20" decoding="async" style="color: transparent;"
+               [src]="item.icon">
+        </div>
+        <h4 class="mb-0 inline-block pl-4 tracking-[0.005em] text-[#111827]">
+          {{ item.text }}
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+

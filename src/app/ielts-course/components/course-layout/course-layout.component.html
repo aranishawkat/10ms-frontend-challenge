@@ -1,0 +1,25 @@
+<div *ngFor="let section of data.sections">
+  <div class="flex flex-col gap-3" *ngIf="section.type === 'features'">
+    <h1 class=" text-xl font-semibold leading-[30px] text-black">
+      {{ section.name }}
+    </h1>
+    <div class="mb-16 grid grid-cols-1 gap-4 rounded-md border bg-[#111827] p-6 md:grid-cols-2 md:gap-8">
+      <div class="m-1 flex flex-row items-start gap-3" *ngFor="let feature of section.values">
+        <div>
+          <div class="mb-4 mx-auto opacity-0 transition-opacity duration-300 ease-in-out"
+               style="font-size: 0px; opacity: 1;">
+            <img alt="course-layout-icon" loading="lazy" width="36" height="36"
+                 decoding="async" data-nimg="1" class=""
+                 src="{{ feature.icon }}"
+                 style="color: transparent;">
+          </div>
+        </div>
+        <div class="flex flex-1 flex-col gap-2">
+          <h1 class="text-[18px] font-[500px] leading-[26px] text-white">{{ feature.title }}</h1>
+          <h2 class="text-[14px] font-[400px] leading-[22px] text-[#9CA3AF]">
+            {{ feature.subtitle}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
